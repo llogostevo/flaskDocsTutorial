@@ -1,13 +1,6 @@
 '''
 # TODO #
-
-GETTING AN ERROR
-
-Error: Could not locate a Flask application. You did not provide the "FLASK_APP" 
-environment variable, 
-and a "wsgi.py" or "app.py" module was not found in the current directory.
-
-NEED TO FIGURE OUT HOW TO SET THE FLASK APP uP 
+DEFINE AND ACCESS THE DATABASE
 '''
 import os
 
@@ -29,7 +22,7 @@ def create_app(test_config=None):
         # should be set to random value when deploying
         SECRET_KEY='dev',
         # is the path to the SQL database
-        DATABASE=os.path.join(app.instace_path, 'flaskr.sqlite'),
+        DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
     )
 
     if test_config is None:
